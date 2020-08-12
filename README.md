@@ -1,1 +1,1 @@
-# paint-app
+# Paint App

@@ -1,0 +1,222 @@
+body {
+  font-family: arial;
+}
+
+.canvas-container {
+  position: relative;
+}
+
+.canvas-container #canvas-box {
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: none;
+}
+
+.canvas-container {
+  float: left;
+}
+
+.btn-toolbar {
+  float: left;
+  margin-right: 8px;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.btn-toolbar .popover-icon, .btn-toolbar .menu-item {
+  height: 50px;
+  width: 50px;
+  display: block;
+  border: 1px solid;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+#image-container img {
+  border: 1px solid #ddd;
+}
+
+#image-container .btn {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  font-size: 14px;
+  border-radius: 6px;
+  color: #333;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .25);
+  font-family: inherit;
+}
+
+#co-ordinates {
+  margin-left: 58px;
+  float: left;
+  font-family: monospace, arial;
+  font-size: 12px;
+}
+
+/* popover styles start*/
+.popover-container {
+  width: 50px;
+  height: 50px;
+
+  position: relative;
+}
+
+.popover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popover-body {
+  display: none;
+  z-index: 1000;
+  width: 180px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 12px -4px #ddd;
+
+  position: absolute;
+  left: calc(100%);
+  margin-left: 10px;
+  top: 0;
+}
+
+.popover-body .arrow {
+  position: absolute;
+  left: -9px;
+  top: 20px;
+}
+
+.popover-body .arrow::before, .popover-body .arrow::after {
+  content: '';
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+}
+
+.popover-body .arrow::before {
+  margin-left: -1px;
+  border-right: 10px solid #ccc;
+}
+
+.popover-body .arrow::after {
+  border-right: 10px solid #fff;
+}
+
+.popover-item {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.popover-container.open .popover-body {
+  display: block;
+}
+/* popover styles ends */
+
+.menu-item {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.menu-item svg {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-toolbar .popover-icon.active, .btn-toolbar .menu-item.active {
+  outline: 4px solid blue;
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.pencil-item, .highlighter-item, .fill-item {
+  border: 1px solid #000;
+}
+
+
+/* width selector starts */
+#thickness ~ .popover-body .arrow {
+  top: 12px;
+}
+
+.thickness-item {
+  position: relative;
+}
+
+.thickness-item::after {
+  content: '';
+  border-radius: 50%;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thickness-item.thickness-1::after {
+  width: 3px;
+  height: 3px;
+}
+
+.thickness-item.thickness-3::after {
+  width: 9px;
+  height: 9px;
+}
+
+.thickness-item.thickness-5::after {
+  width: 15px;
+  height: 15px;
+}
+/* width selector ends */
+
+/* trail with mouse starts */
+#pointer-container {
+  position: absolute;
+  pointer-events: none;
+  cursor: none;
+}
+
+.pencil-pointer {
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+}
+
+.highlighter-pointer {
+  border-left: 2px solid;
+  height: 8px;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.eraser-pointer {
+  border: 1px solid;
+  background-color: #fff;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.text-pointer::before {
+  transform: translate(-50%, -50%);
+  content: 'T';
+}

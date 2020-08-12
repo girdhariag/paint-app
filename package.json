@@ -1,0 +1,19 @@
+{
+  "name": "paint-app",
+  "version": "1.0.0",
+  "description": "Simple Paint App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girdhariag/paint-app.git"
+  },
+  "author": "Girdhari Agarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girdhariag/paint-app/issues"
+  },
+  "homepage": "https://github.com/girdhariag/paint-app#readme"
+}
